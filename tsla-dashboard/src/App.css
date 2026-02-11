@@ -1,0 +1,333 @@
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+  color: #f9fafb;
+  padding: 2rem;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.app-shell {
+  width: 100%;
+  max-width: 1100px;
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 1rem;
+  border: 1px solid #1f2937;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.7);
+  padding: 1.75rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.app-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.app-subtitle {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.badge {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(22, 163, 74, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  color: #4ade80;
+}
+
+.metrics-row {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.primary-metric-card {
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.9rem;
+  background: radial-gradient(circle at top left, #22c55e20, transparent 55%), #020617;
+  border: 1px solid #16a34a40;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.primary-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.17em;
+  color: #9ca3af;
+}
+
+.primary-price {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.primary-sub {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.secondary-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.metric-card {
+  padding: 0.9rem 1rem;
+  border-radius: 0.85rem;
+  background: #020617;
+  border: 1px solid #1f2937;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #6b7280;
+}
+
+.metric-value {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.metric-footnote {
+  font-size: 0.75rem;
+  color: #4b5563;
+}
+
+.session-context-card {
+  padding: 1rem 1.25rem;
+  border-radius: 0.9rem;
+  background: #020617;
+  border: 1px solid #1f2937;
+}
+
+.session-context-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+.session-context-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 1rem;
+}
+
+.session-block {
+  min-width: 0;
+}
+
+.session-block-full {
+  grid-column: 1 / -1;
+}
+
+.session-block-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #4b5563;
+  margin-bottom: 0.2rem;
+}
+
+.session-stats-line,
+.tail-opportunity-alert {
+  font-size: 0.85rem;
+  color: #e5e7eb;
+}
+
+.tail-opportunity-alert .tail-opp-type { font-weight: 600; }
+.tail-opportunity-alert .tail-opp-price { color: #38bdf8; }
+.tail-opportunity-alert .tail-opp-poc { color: #4ade80; }
+.tail-opportunity-alert .tail-opp-distance { color: #9ca3af; }
+.tail-opportunity-alert .tail-opp-confidence { color: #6b7280; }
+
+.ext-above { color: #4ade80; }
+.ext-below { color: #f87171; }
+
+.session-muted {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+@media (max-width: 700px) {
+  .session-context-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chart-card {
+  margin-top: 0.5rem;
+  padding: 1.25rem 1.5rem 1.4rem;
+  border-radius: 1rem;
+  background: #020617;
+  border: 1px solid #1f2937;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.chart-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.chart-subtitle {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.tail-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.tail-buy {
+  background: rgba(22, 163, 74, 0.12);
+  border-color: rgba(34, 197, 94, 0.4);
+  color: #bbf7d0;
+}
+
+.tail-sell {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(248, 113, 113, 0.4);
+  color: #fecaca;
+}
+
+.tail-label {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.tail-value {
+  font-weight: 500;
+}
+
+.tail-distance {
+  color: #9ca3af;
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.status-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  margin-right: 0.35rem;
+}
+
+.status-live {
+  display: inline-flex;
+  align-items: center;
+  color: #22c55e;
+}
+
+.status-live .status-dot {
+  background: #22c55e;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.7);
+}
+
+.status-error {
+  display: inline-flex;
+  align-items: center;
+  color: #f97373;
+}
+
+.status-error .status-dot {
+  background: #f97373;
+  box-shadow: 0 0 10px rgba(248, 113, 113, 0.7);
+}
+
+.status-muted {
+  display: inline-flex;
+  align-items: center;
+  color: #9ca3af;
+}
+
+.status-muted .status-dot {
+  background: #4b5563;
+}
+
+.error-text {
+  color: #f97373;
+}
+
+.chart-container {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 320px;
+}
+
+@media (max-width: 800px) {
+  .metrics-row {
+    grid-template-columns: 1fr;
+  }
+
+  .app-shell {
+    padding-inline: 1.4rem;
+  }
+
+  .primary-price {
+    font-size: 2.4rem;
+  }
+
+  .secondary-metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  #root {
+    padding: 1.2rem;
+  }
+
+  .secondary-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
